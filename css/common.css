@@ -6,19 +6,27 @@
 }
 :root[color-theme="dark"] {
   /*root자리에 선택자와도 됨*/
-  --background: #000;
+  --background: #3a3a3a;
   --boxColor: #3a3a3a;
   /* --fontcolor: #fff; */
   --fontcolor: #3a3a3a;
 }
-
+:root[change-color="orange"] {
+  --fontcolorchange: rgb(222, 115, 27);
+}
+:root[change-color="white"] {
+  --fontcolorchange: #fff;
+}
+:root[change-color="brown"] {
+  --fontcolorchange: #3a3a3a;
+}
 /*재사용 쉬움, but 클래스명 엄청 길고 지저분해짐 ㅜㅜ*/
 .bold {
   font-weight: bold;
 }
 .whiteFont {
-  /* color: #fff; */
   color: var(--fontcolor);
+  /* color: var(--fontcolorchange); */
 }
 .whiteBackground {
   background-color: var(--background);
@@ -96,6 +104,7 @@
   font-size: 3rem;
   font-weight: bold;
   color: var(--fontcolor);
+  /* color: var(--fontcolorchange); */
 }
 .flexCenter {
   display: flex;
@@ -107,4 +116,10 @@
 }
 .footer {
   height: 30%;
+}
+#hi {
+  color: var(--fontcolorchange);
+}
+#aboutME {
+  color: var(--fontcolorchange);
 }
