@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오</title>
+<link rel="stylesheet" href="./css/common.css"/>  
+<link rel="stylesheet" href="./css/portfolio.css"/>
+</head>
+  <body>
+    <section id="wrap">
+      <header><span id="darkMode" class="whiteFont">DARK</span></header>
+      <div id="smallCircle" class="whiteBackground"></div>
+      <div id="hi" class="fontsize10rem whiteFont bold subject">HI!🥕</div>
+      <div class="fontsize7rem whiteFont bold subject line80">
+        WELCOME<br />
+        TO MY PORFOLIO
+      </div>
+      <div id="bigCircle" class="whiteBackground" data-id="가져오기!"></div>
+    </section>
+    <section>
+      <div class="whiteFont fontsize5rem whiteboxWidth centerTextBox10 bold">MY PORTFOLIO</div>
+      <div id="aboutME" class="whiteFont fontsize2rem centerTextBox10 bold whiteBackground">ABOUT ME</div>
+      <div class="fontsize2rem whiteFont bold subject">SKILLS</div>
+    <div class="flexAlignStart">
+        <div class="whiteBoxWidth whiteBox11rem"></div>
+        <div>
+            <div class="whiteBoxWidth whiteBox4rem"></div>
+            <div class="whiteBoxWidth whiteBox5rem"></div>
+        </div>
+        <div class="whiteBoxWidth whiteBox11rem"></div>
+        <div class="whiteBoxWidth whiteBox11rem"></div>
+    </div>
+    </section>
+    <section class="flexCenter">
+      <div id="projectBox" class="whiteFont whiteBackground flexCenter">PROJECT 01</div>
+    </section>
+    <section>
+      <div class="whiteFont fontsize5rem bold subject contact" >CONTACT ME</div>
+      <div class="whiteBackground"></div>
+    </section>
+  </body>
+  <script>
+    window.onload = function(){
+        console.log(document.getElementById("bigCircle").getAttribute("data-id"));
+        console.log(document.getElementById("bigCircle").getAttribute("class"));
+        document.documentElement.setAttribute("color-theme","mint");
+        document.documentElement.setAttribute("change-color","orange");
+        //최상위 root에 이 속성을 셋팅
+    }
+    let darkMode = document.getElementById("darkMode");
+    darkMode.addEventListener("click",(e)=>{
+        //e ===> 이벤트가 일어난 객체
+        //e.target ==> 일어난 객체를 선택
+        //e.target.innerText => 일어난 객체를 선택해서 innerText 속성을 선택
+        if(e.target.innerText === "DARK"){
+            document.documentElement.setAttribute("color-theme","dark");
+            e.target.innerText = "MINT";
+        }else {
+            document.documentElement.setAttribute("color-theme","mint");
+            e.target.innerText = "DARK";
+        }
+    });
+ let hi = document.getElementById("hi");
+ hi.addEventListener("mouseover",(e)=>{
+    if(e.target.innerText ==="HI!🥕"){
+        document.documentElement.setAttribute("change-color","brown");
+        e.target.innerText = "HI!🥕🥑🥔";
+    } else {
+        document.documentElement.setAttribute("change-color","orange");
+        e.target.innerText = "HI!🥕";
+    }
+ });
+ let aboutME = document.getElementById("aboutME");
+ aboutME.addEventListener("click",(e)=>{
+    if(e.target.innerText ==="ABOUT ME"){
+        document.documentElement.setAttribute("change-color","brown");
+        e.target.innerText = "HI!🥕🥑🥔";
+    } else {
+        document.documentElement.setAttribute("change-color","orange");
+        e.target.innerText = "HI!🥕";
+    }
+ });
+  </script>
+</html>

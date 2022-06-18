@@ -1,0 +1,70 @@
+:root[color-theme="mint"] {
+  --background: #b8edd1;
+  --boxColor: #fff;
+  --fontcolor: #3a3a3a;
+}
+:root[color-theme="dark"] {
+  /*root자리에 선택자와도 됨*/
+  --background: #3a3a3a;
+  --boxColor: #3a3a3a;
+  --fontcolor: #fff;
+}
+html {
+  background-color: var(--background);
+}
+:root[change-color="orange"] {
+  --fontcolorchange: rgb(222, 115, 27);
+}
+:root[change-color="brown"] {
+  --fontcolorchange: #3a3a3a;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+header {
+  width: 100%;
+  height: 3rem;
+  text-align: right;
+  padding-top: 1rem;
+  padding-right: 3rem;
+}
+header > span {
+  cursor: pointer;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  /* background-color: #b8edd1; */
+}
+#smallCircle {
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  top: -10rem;
+  left: -10rem;
+  opacity: 0.2;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#bigCircle {
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  bottom: -5rem;
+  right: -18rem;
+  opacity: 0.2;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#hi {
+  color: var(--fontcolorchange);
+}
+#aboutME {
+  color: var(--fontcolorchange);
+}

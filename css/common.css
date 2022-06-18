@@ -1,0 +1,110 @@
+:root[color-theme="mint"] {
+  --background: #b8edd1;
+  --boxColor: #fff;
+  /* --fontcolor: #222; */
+  --fontcolor: #fff;
+}
+:root[color-theme="dark"] {
+  /*root자리에 선택자와도 됨*/
+  --background: #000;
+  --boxColor: #3a3a3a;
+  /* --fontcolor: #fff; */
+  --fontcolor: #3a3a3a;
+}
+
+/*재사용 쉬움, but 클래스명 엄청 길고 지저분해짐 ㅜㅜ*/
+.bold {
+  font-weight: bold;
+}
+.whiteFont {
+  /* color: #fff; */
+  color: var(--fontcolor);
+}
+.whiteBackground {
+  background-color: var(--background);
+}
+.fontsize2rem {
+  font-size: 2rem;
+}
+.fontsize5rem {
+  font-size: 5rem;
+}
+.fontsize7rem {
+  font-size: 7rem;
+}
+.fontsize10rem {
+  font-size: 10rem;
+}
+.fontsize15rem {
+  font-size: 15rem;
+}
+.whiteBoxWidth {
+  width: 15rem;
+  background-color: #fff;
+  /* background-color: var(--backGround); */
+  border-radius: 1rem;
+}
+.line80 {
+  line-height: 80%;
+}
+.whiteBox4rem {
+  height: 4rem;
+}
+.whiteBox5rem {
+  height: 5rem;
+}
+.whiteBox7rem {
+  height: 7rem;
+}
+.whiteBox11rem {
+  height: 11rem;
+}
+.whiteBox13rem {
+  height: 13rem;
+}
+.whiteBox17rem {
+  height: 17rem;
+}
+.whiteBox20rem {
+  height: 20rem;
+}
+.centerTextBox10 {
+  padding-top: 1.5rem;
+  width: 100%;
+  height: 15rem;
+  text-align: center;
+}
+.subject {
+  padding-top: 2rem;
+  padding-left: 6rem;
+}
+.flexAlignStart {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flexAlignStart > div {
+  margin-left: 4rem;
+}
+.flexAlignStart > div > div {
+  margin-bottom: 1rem;
+}
+#projectBox {
+  width: 100%;
+  height: 90vh;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--fontcolor);
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact {
+  height: 70%;
+}
+.footer {
+  height: 30%;
+}
